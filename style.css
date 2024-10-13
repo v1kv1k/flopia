@@ -1,0 +1,112 @@
+body {
+    font-family: 'Hammersmith One', sans-serif;
+    background-color: black; /* Start with a black background */
+    animation: backgroundFadeIn 2s ease-in forwards;
+}
+@keyframes backgroundFadeIn {
+    from { background-color: black; }
+    to { background-color: transparent; }
+}
+.bg-image {
+    background-image: url('img/bg.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+.slide-in {
+    opacity: 0;
+    animation: slideIn 1s ease-out forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.hover-grow {
+    transition: transform 0.3s ease;
+}
+.hover-grow:hover {
+    transform: scale(1.05);
+}
+.hover-bright {
+    transition: filter 0.3s ease;
+}
+.hover-bright:hover {
+    filter: brightness(1.2);
+}
+.hover-rotate {
+    transition: transform 0.3s ease;
+}
+.hover-rotate:hover {
+    transform: rotate(5deg);
+}
+.hover-bounce {
+    transition: transform 0.3s ease;
+}
+.hover-bounce:hover {
+    animation: bounce 0.5s ease infinite;
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.hover-shake {
+    transition: transform 0.3s ease;
+}
+.hover-shake:hover {
+    animation: shake 0.5s ease infinite;
+}
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+.hover-pulse {
+    transition: transform 0.3s ease;
+}
+.hover-pulse:hover {
+    animation: pulse 1s ease infinite;
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+.copied {
+    animation: copiedAnimation 0.5s ease-in-out;
+}
+@keyframes copiedAnimation {
+    0%, 100% { transform: scale(1); color: white; }
+    50% { transform: scale(1.1); color: lime; }
+}
+.flip {
+    display: inline-block;
+    transition: transform 0.6 ease;
+    transform-style: preserve-3d;
+    perspective: 1000;
+}
+.flip .front {
+    position: relative;
+    z-index: 2;
+    transform: rotateY(0);
+}
+.flip .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform: rotateY(180);
+}
+.flip .flipped {
+    transform: rotateY(180);
+}
+.hidden {
+    display: none;
+}
