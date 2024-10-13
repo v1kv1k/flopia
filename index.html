@@ -4,39 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
     <title>Sosi huec</title>
+    <style>
+        body {
+            font-family: 'Hammersmith One', sans-serif;
+        }
+
+        @keyframes fadeInFromTop {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInFromTop {
+            animation: fadeInFromTop 0.5s ease-out forwards;
+        }
+    </style>
 </head>
 
-<body>
-    <div class="header">
-        <div class="header_logo animate-logo">
-            <img src="img/logo.png" alt="logo">
+<body class="bg-cover bg-center min-h-screen bg-no-repeat" style="background-image: url('img/bg.png');">
+    <div class="header pt-5 h-56 animate-fadeInFromTop" style="animation-delay: 0.2s;">
+        <div class="header_logo h-full flex justify-center items-center">
+            <img src="img/logo.png" alt="logo" class="h-full mx-auto">
         </div>
     </div>
-    <div class="content animate-content">
-        <section class="ip-block">
-            <p>IP-адрес</p>
-            <a href="#">сосы</a>
+    <div class="content animate-fadeInFromTop" style="animation-delay: 0.4s;">
+        <section class="ip-block h-52 text-center flex flex-col items-center justify-center">
+            <p class="text-4xl text-white font-bold">IP-адрес</p>
+            <a href="#" class="text-4xl text-white font-bold no-underline">сосы</a>
         </section>
-        <section class="list">
-            <div class="list_item">
-                <img src="svg/main.svg" alt="Головна">
-                <a href="#">Головна</a>
+        <section class="list h-52 flex flex-wrap justify-center items-center p-5 animate-fadeInFromTop"
+            style="animation-delay: 0.6s;">
+            <div class="list_item text-center w-64 mb-4 md:mb-0">
+                <img src="svg/main.svg" alt="Головна" class="block mx-auto w-12 h-auto">
+                <a href="#" class="block mt-2 text-xl text-white no-underline">Головна</a>
             </div>
-            <div class="list_item">
-                <img src="svg/map.svg" alt="Мапа">
-                <a href="#">Мапа</a>
+            <div class="list_item text-center w-64 mb-4 md:mb-0">
+                <img src="svg/map.svg" alt="Мапа" class="block mx-auto w-12 h-auto">
+                <a href="#" class="block mt-2 text-xl text-white no-underline">Мапа</a>
             </div>
-            <div class="list_item">
-                <img src="svg/modpack.svg" alt="Модпак">
-                <a href="#">Модпак</a>
+            <div class="list_item text-center w-64">
+                <img src="svg/modpack.svg" alt="Модпак" class="block mx-auto w-12 h-auto">
+                <a href="#" class="block mt-2 text-xl text-white no-underline">Модпак</a>
             </div>
         </section>
-        <section class="footer">
+        <section class="footer h-92 text-center text-white animate-fadeInFromTop" style="animation-delay: 0.8s;">
             <a href="https://example.com">
-                <img src="img/донація.png" alt="донація">
+                <img src="img/донація.png" alt="донація" class="h-full block mx-auto">
             </a>
             <p>© 2024 Sosi Huec</p>
         </section>
